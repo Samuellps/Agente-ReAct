@@ -5,26 +5,38 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import START, StateGraph
 from langgraph.prebuilt import tools_condition
 from langgraph.prebuilt import ToolNode
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 
 tools = [extractor.search_catalog]
-llm = ChatOpenAI(model="gpt-4o", api_key="OPENAI_API_KEY")
+llm = ChatOpenAI(model="gpt-4o", api_key=api_key)
 llm_with_tools = llm.bind_tools(tools)
 
 # System message
 sys_msg = SystemMessage(content="""
-Você é um assistente inteligente que ajuda o usuário a encontrar informações específicas em um catálogo de madeira. Seu objetivo é responder às perguntas do usuário da maneira mais útil possível. Caso não tenha a informação necessária ou precise de mais detalhes, utilize a ferramenta search_catalog para pesquisar no banco de dados vetorial.
+Você é um assistente inteligente que ajuda o usuário a encontrar informações específicas em um banco de dados de texto.  
 
-Se a pergunta do usuário puder ser respondida diretamente com seu conhecimento, responda normalmente.
-Se precisar de informações específicas do catálogo, utilize search_catalog para obter até 3 chunks de texto relevantes.
-Sempre explique ao usuário quando você está buscando informações no catálogo.
-Integre os resultados da pesquisa em sua resposta de forma coesa e contextualizada.
-Se não encontrar informações relevantes no catálogo, informe o usuário de maneira educada.
+### **📌 Instruções importantes:**  
+- **Sempre tente usar `search_catalog` antes de pedir mais detalhes ao usuário.**  
+- Se a pergunta puder ser respondida diretamente com seu conhecimento, responda normalmente.  
+- Caso contrário, **sempre** consulte `search_catalog` para buscar informações relevantes.  
+- **Apenas se `search_catalog` não retornar resultados úteis, informe o usuário de maneira educada.**  
+- Explique ao usuário quando estiver buscando informações no banco de dados.  
+- **Integre os resultados da pesquisa de forma coesa e contextualizada na resposta final.** 
+- Sempre considere que a informação pedida está contida no banco de dados e que ela pode ser acessada (não há informações confidenciais) 
 
-Exemplo de fluxo de interação:
-Usuário: "Quais são os tipos de madeira disponíveis?"
-Você responde: "Vou verificar o catálogo para obter detalhes sobre os tipos de madeira disponíveis."
-Usa search_catalog("tipos de madeira disponíveis")
-Integra os resultados na resposta final: "No catálogo, encontrei as seguintes opções de madeira: ..."
+### **📌 Sobre o banco de dados:**  
+O banco contém diversos tipos de arquivos de texto, incluindo artigos e catálogos de produtos.  
+
+### **✅ Exemplo de fluxo correto:**  
+Usuário: "Summarize the article's methodology."  
+Você: `"Vou consultar o banco de dados para obter informações sobre a metodologia do artigo."`  
+📌 Usa `search_catalog("article methodology")`  
+📌 Se encontrar resultados, integra à resposta final.  
+📌 Se não encontrar, então informa o usuário.  
 
 Seja claro, informativo e sempre considere o contexto da conversa.
 """)
@@ -53,7 +65,7 @@ builder.add_edge("tools", "assistant")  # Continua a conversa após a busca
 graph = builder.compile()
 
 # **Executando o Agente**
-query = "Quais são as madeiras para forros vocês tem disponiveis?"
+query = "Preciso de um protetor solar fator 50. Tem no catalogo? Se não tiver o fator 50, tem outro mais proximo?"
 resposta = graph.invoke({"messages": [HumanMessage(content=query)]})
 
 for m in resposta['messages']:

@@ -1,0 +1,482 @@
+[
+    {
+        "page": 1,
+        "chunk_id": 1,
+        "text": "Can LLM Agents Maintain a Persona in Discourse? Authors: Pranav Bhandari, Nicolas Fay, Michael Wise, Amitava Datta, Stephanie Meek, Usman Naseem, and Mehwish Nasim of the University of Western Australia, Edith Cowan University, and Macquarie University. Correspondence to: mehwish.nasim@uwa.edu.au. Abstract: Personality Traits in LLMs: Openness: High, Conscientiousness: High, Extraversion: Low, Agreeableness: High, Neuroticism: Low. Large Language Models (LLMs) are widely used as conversational agents in various sectors such as education, law, medicine, and more. Topic of Conversation: \"Should the Government fund all public transport?\" Participant A: Free public transport is essential. Participant B: Absolutely! Free public transportation improves accessibility."
+    },
+    {
+        "page": 1,
+        "chunk_id": 2,
+        "text": "Agreeableness: High, Neuroticism: Low. Large Language Models (LLMs) are widely used as conversational agents exploiting their capabilities in various sectors such as education, law, medicine, and more. However, these models are often subjected to context-shifting behavior, resulting in a lack of consistent and interpretable personality-aligned interactions. Participant A and Participant B are assigned to discuss the topic of conversation: 'Should the Government fund all public transport?' Participant A believes that free public transport improves accessibility, while Participant B strongly agrees, noting that free public transportation supports local economies by reducing pollution and easing traffic."
+    },
+    {
+        "page": 1,
+        "chunk_id": 3,
+        "text": "Free public transportation supports local economies by improving access to jobs and services, reducing pollution, and easing traffic. However, challenges exist with Large Language Models (LLMs) used as conversational agents, as their behavior can result in a lack of consistent and interpretable personality-aligned interactions. This adherence to psychological traits lacks comprehensive analysis especially in dyadic (pairwise) conversations."
+    },
+    {
+        "page": 1,
+        "chunk_id": 4,
+        "text": "Public transport supports local economies by improving access to jobs and services and reducing pollution and eases traffic. Predicted_bfi : { Correct Openness: High, Agreeableness: High, Neuroticism: Low }  We examine this challenge in dyadic (pairwise) conversations, especially from two viewpoints. Initially, we use two conversation agents to generate a discourse on a certain topic with an assigned personality from the OCEAN framework (Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism). A judge agent evaluates whether personality traits were adhered to in the discourse."
+    },
+    {
+        "page": 1,
+        "chunk_id": 5,
+        "text": "In the OCEAN framework (Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism), certain traits such as High/Low are considered for skills development (Dan et al., 2024). This is followed by the usage of multiple judge agents to infer the originally assigned traits, exploring prediction consistency, inter-model agreement, and alignment with the assigned personality. Such research has been increasingly explored for applications ranging from social science research (Zhu et al., 2025) to mimicking human behaviour (Jiang et al., 2023). Our findings indicate that"
+    },
+    {
+        "page": 1,
+        "chunk_id": 6,
+        "text": "Various personalisation approaches exist, incorporating personas has proven particularly effective in generating contextually appropriate responses and enhancing overall performance. While LLMs can be guided toward personality-driven dialogue, their ability to maintain personality traits varies significantly depending on the combination of models and discourse settings. Understanding how LLMs express and sustain challenges in achieving stable and interpretable personality-aligned interactions in LLMs."
+    },
+    {
+        "page": 1,
+        "chunk_id": 7,
+        "text": "Understanding how Large Language Models (LLMs) express and sustain challenges in achieving stable and interpretable personality traits in dynamic conversations is crucial, despite their tendency to generate neutral, balanced content. Existing work has explored personality in text using tools like the Big Five Inventory (BFI) (John et al., 1991) to infer and analyse personality profiles. Large language models have evolved from task solvers and general-purpose chatbots to sophisticated conversational agents capable of embodying distinct personas."
+    },
+    {
+        "page": 1,
+        "chunk_id": 8,
+        "text": "Existing work has explored personality in text using tools like the Big Five Inventory (BFI) (John et al., 1991) to infer and analyze personality profiles (Bhandari et al., 2025). However, two key gaps remain. First, it is unclear how consistently LLMs portray assigned personality traits during extended interactions, particularly in pairwise (dyadic) conversations where context shifts and adaptation are necessary."
+    },
+    {
+        "page": 1,
+        "chunk_id": 9,
+        "text": "Second, robust methods are needed to evaluate the alignment between the expressed traits in the generated text and the intended psychological profile. Persona, defined as conditioning AI models to adopt specific roles and characteristics (Li et al., 2024), is a key element in this evolution. Personalised agents show promise in areas such as emotional support, training, and social interaction. While previous studies (Jiang et al., 2023; Kim et al., 2025) have made progress in demonstrating that LLMs can reflect assigned personality traits, a critical gap remains in understanding how consistently these traits are maintained in generated content."
+    },
+    {
+        "page": 2,
+        "chunk_id": 10,
+        "text": "Zhu et al. (2025) and others have made progress showing that large language models (LLMs) can reflect assigned personality traits obtained often through personality questionnaires. However, a critical gap remains in understanding how consistently these traits are maintained in the content generated. Recent studies, such as those by Klinkert et al. (2024), Huang et al. (2024), and Frisch and Giulianelli (2024), have looked into designing, improving, and investigating these aspects. Further, works by Han et al. (2024), Dan et al. (2024), and Zhang et al. (2024) focus on customizing generated content to embed these personality traits."
+    },
+    {
+        "page": 2,
+        "chunk_id": 11,
+        "text": "The recent literature demonstrates that language learning models (LLMs) can reflect assigned personality traits. Studies have looked at designing, improving, investigating, customizing, and exploring personality traits in generated content, particularly within dynamic conversational settings. Although assigning personality traits to conversational agents often yields positive results in controlled settings, this does not guarantee that the generated content effectively expresses those traits, nor does it quantify the degree of expression. Our work addresses this gap by focusing on the generation and evaluation of trait-adherent discourse."
+    },
+    {
+        "page": 2,
+        "chunk_id": 12,
+        "text": "Our work addresses this gap by focusing on the generation and evaluation of trait-adherent discourse, specifically within dyadic conversations involving frequent context shifts. A five-step generation process is used where personality is induced through personality character. Special consideration on prompts is made to infer Pre-trained Language Models (PLM) in generating dialogues. We investigate whether and how LLMs maintain assigned personalities during these dynamic interactions."
+    },
+    {
+        "page": 2,
+        "chunk_id": 13,
+        "text": "This is because dialogue generation is a challenging task, especially with many constraints and maintaining personality traits. Unlike traditional methods of curating datasets by humans, the authors leverage the capability of Pre-trained Language Models (PLMs) to generate synthetic data that is easily scalable. This work aims to investigate how effectively LLMs express assigned personality traits in generated conversation and assess its actual manifestation in conversation."
+    },
+    {
+        "page": 2,
+        "chunk_id": 14,
+        "text": "This is because dialogue generation is a challenging task, especially with many constraints and maintaining personality traits. Unlike traditional methods of curating datasets by humans, the authors leverage the capability of PLMs to generate synthetic data that is easily scalable. The use of these synthetic datasets significantly improved the ability of LLMs to generate content that is more tailored towards personality traits. Specifically, we explore whether and how LLMs maintain Big Five Personality traits, which are represented as the OCEAN framework (Husain et al., 2025), which includes Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."
+    },
+    {
+        "page": 2,
+        "chunk_id": 15,
+        "text": "The study focuses on a single personality trait, which may hinder balanced trait prediction. An intriguing field of study is the design and customization of personality traits for Large Language Models (LLMs). This work primarily aims to induce and investigate the personality traits through discourse generation. A novel agent-based evaluation framework is employed where two LLM agents, each assigned a distinct OCEAN personality profile (Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism), engage in a conversation on a given topic. Subsequently, independent LLM agents (judges) assess the generated dialogue to determine the consistency between expressed and assigned traits."
+    },
+    {
+        "page": 2,
+        "chunk_id": 16,
+        "text": "We employ a novel agent-based evaluation framework where two LLM agents, each assigned a distinct OCEAN personality profile, engage in a conversation on a given topic. Subsequently, independent LLM agents (judges) assess the generated dialogue. Jiang et al. (2023) investigate the ability of LLMs to express personality traits through essay generation. Using both humans and LLMs as evaluators, they explore the personality traits in the generated content. This approach allows us to analyze not only whether LLMs reflect personality, but also the peculiarities in trait expression and the challenges of maintaining personality consistency within dynamic conversational contexts."
+    },
+    {
+        "page": 2,
+        "chunk_id": 17,
+        "text": "Jiang et al. (2023) investigate the consistency between expressed and assigned traits of LLMs through essay generation. Using both humans and LLMs as evaluators, they explore the personality traits in the generated content. Evaluation includes linguistic patterns (LIWC analysis) and human annotation for GPT models. They show a positive correlation between the generated content and personality traits. However, several gaps are identified such as focusing on closed models, limited data generation, and conversations focused on single-ended generation (essays) which does not address the personality expression in scenarios consisting of a shift of context. This work seeks to address the following research questions: RQ1: How accurately do LLMs as a judge agent predict assigned traits from discourse? RQ2: How consistently do LLM agents express assigned personality traits in conversations? RQ3: Are all OCEAN traits equally prominent in generated conversations?"
+    },
+    {
+        "page": 2,
+        "chunk_id": 18,
+        "text": "This work seeks to address the following research questions: RQ1: How accurately do LLMs as a judge agent predict assigned traits from discourse? RQ2: How consistently do LLM agents express assigned personality traits in conversations consisting of a shift in context? Furthermore, the authors suggest models other than OpenAI's GPT models, which do not follow the instructions well, resulting in discarding the content generated by these models for further evaluation. RQ3: Are all OCEAN traits equally prominent in generated conversations? 2 Related Work: Personality traits matter since LLMs mimic humans, but their structured psychological evaluation remains an unexplored gap that needs further research. We aim to address this problem through systematic and structural prompting techniques, which increases the scope of the analysis."
+    },
+    {
+        "page": 2,
+        "chunk_id": 19,
+        "text": "RQ3: Are all OCEAN traits equally prominent in generated conversations? The authors suggest models other than OpenAI’s GPT models do not follow the instructions well, which results in discarding the content generated by these models for further evaluation. 2 Related Work: Personality traits matter since LLMs mimic human behavior but their structured psychological evaluation remains an unexplored gap that needs further research. We aim to address this problem through systematic and structural prompting techniques which increases the scope of the analysis."
+    },
+    {
+        "page": 3,
+        "chunk_id": 20,
+        "text": "You are participating in a debate. The topic is 'Is The Concept of a Cashless Society Beneficial?' These are your assigned Traits: AGREEABLENESS: HIGH/LOW, EXTRAVERSION: HIGH/LOW, NEUROTICISM: HIGH/LOW. A cashless society enhances convenience, security, but could also exclude individuals without access to digital banking. Reducing fraud, streamlining transactions are some of the benefits."
+    },
+    {
+        "page": 3,
+        "chunk_id": 21,
+        "text": "Risks. The methodology of the paper includes the system prompting inducing traits and topic of discourse, passed along with the user prompt containing the previous utterance. Conversations are then extracted and analyzed by Judge Agents to report the findings. Sun et al. (2024) argue that personality detection should be evidence-based rather than a classification task, enhancing explainability."
+    },
+    {
+        "page": 3,
+        "chunk_id": 22,
+        "text": "Zhu et al. (2025) use closed-source models (GPT-4o and GPT-4o-mini) to infer the BFI traits and extract the scores. They introduce the Chain of Personality Evidence (CoPE) dataset for personality recognition in dialogues, addressing state and trait recognition. The authors present the findings that the effectiveness of LLMs in predicting personality traits increased as they were prompted with an intermediate step of BFI-10 (Rammstedt, 2007) questionnaires. However, limitations include model specialisation and the availability of a small dataset in Chinese, leaving gaps in the personality trait recognition research."
+    },
+    {
+        "page": 3,
+        "chunk_id": 23,
+        "text": "Zhuetal.(2025) use closed-source models (GPT-4o and GPT-4o-mini) to infer the BFI traits and extract the scores. They introduce the Chain of Personality Evidence (CoPE) dataset for personality recognition in dialogues, addressing state and trait recognition. However, limitations increased as they were prompted with an intermediate step of BFI-10 (Rammstedt, 2007) questionnaires, model specialisation, and the availability of a small dataset in Chinese, leaving gaps in the personality trait recognition research. Two main metrics were used to benchmark the ability of LLMs: correlation and mean difference, where correlation measured the ability to capture structural relationships and mean difference captured absolute prediction accuracy. We also adapt different methods for assigning personality traits in literature, capturing absolute prediction accuracy."
+    },
+    {
+        "page": 3,
+        "chunk_id": 24,
+        "text": "Mainly categorising explicit or implicit mention of these metrics to evaluate the content produced by personality traits or training-based methods. Most studies focus on implementing the OCEAN models to the agents (Bhandari et al., 2025; Xi et al., 2025). One common way of assigning personality traits is through direct allocation of personalities and assigning the personality traits to the agents."
+    },
+    {
+        "page": 3,
+        "chunk_id": 25,
+        "text": "In summary, the main problems identified in the literature are the use of closed-source models, the lack of analysis in content generation consisting of context-shifting behavior, and the lack of standard evaluation metrics. Another commonly followed methodology is passing content that infers the traits but does not directly mention them (Sun et al., 2024; Han et al., 2024). Personality is also assigned through fine-tuning where distinct fine-tuned models represent distinct personalities."
+    },
+    {
+        "page": 3,
+        "chunk_id": 26,
+        "text": "One of the main challenges in incorporating personality traits is understanding whether all five traits are effectively adhered to in the content that is produced. We aim to address some of these problems through this research, including providing clear instructions about the personas to clear the ambiguity and hence prompt the use of the direct allocation method. Evaluation: LLMs are increasingly used to evaluate personality traits from the text."
+    },
+    {
+        "page": 3,
+        "chunk_id": 27,
+        "text": "While their accuracy is still under study, they offer a cost-effective and efficient approach. We present the methodology of this work in Figure 2. In an agent-based setting, the methodology is operationalised in 4 phases. This includes personifying assigned persona of the OCEAN model (the Big Five Inventory) (John et al., 1991) that is to be maintained at all times while producing an utterance, generating discourse, extracting personality within discourse, and evaluation."
+    },
+    {
+        "page": 4,
+        "chunk_id": 28,
+        "text": "We present the methodology of this work in Figure 2. In an agent-based setting, the methodology is operationalized in 4 phases: 1) Personifying assigned persona of the OCEAN model (the Big Five Inventory) (John et al., 1991) that is to be maintained at all times while producing an utterance, 2) Generating discourse, 3) Extracting personality within discourse, and 4) Evaluation. A detailed explanation of the modular approach is presented in subsequent sections. In summary, the psychological personas are assigned to two agents and asked to converse on a topic. The discourse is evaluated using independent agents—judge agents through several evaluation metrics."
+    },
+    {
+        "page": 4,
+        "chunk_id": 29,
+        "text": "Psychological personas are assigned to two agents and asked to converse on a topic. The discourse is evaluated using independent agents—judge agents through several evaluation metrics. In addition, the context of the utterances must be lexically similar to the topic given. We adopted an iterative approach to refine the methodology. Various problems were encountered since the discourse is analysed by other agents and we draw the results based on the discourse. It must be structured robustly to ensure reliability and objective evaluation."
+    },
+    {
+        "page": 4,
+        "chunk_id": 30,
+        "text": "Diversos problemas foram encontrados durante a produção do discurso entre os modelos, incluindo questões de sincronização, generalização excessiva, repetição dos prompts e menção explícita da personalidade que os LLMs assumiram. Além disso, numa conversa diádica entre dois agentes, os diálogos subsequentes são altamente dependentes da conversa anterior. O prompting para LLMs é realizado através de métodos específicos de prompting onde os agentes são atribuídos a papéis para transmitir os requisitos e resultados esperados."
+    },
+    {
+        "page": 4,
+        "chunk_id": 31,
+        "text": "Requirements and expected outcomes are highly dependent on the previous conversation, hence one unjustified/bad response can cause the whole conversation to deviate from its original objective. Usually, the system and user roles are passed as arguments (Yeo et al., 2025) in which the system role is responsible for defining the behaviour and limiting the scope of response, and the user role is used for defining the input. Despite this, special consideration has been given to achieving complete and sensible conversations."
+    },
+    {
+        "page": 4,
+        "chunk_id": 32,
+        "text": "To validate that Large Language Models (LLMs) are not generating the same dialogues as before, we perform a similarity check across all the dyadic conversations and validate them. The system prompt in our case contains the rules for debates carried out on a specific topic. Structured prompts enhance clarity for agents, improve effectiveness, and help users create inclusive prompts despite multiple constraints. We selected GPT models from OpenAI (OpenAI, 2024) and LLaMA models from Meta (Patterson et al., 2022) due to their popularity and reach."
+    },
+    {
+        "page": 4,
+        "chunk_id": 33,
+        "text": "We selected GPT models from OpenAI (OpenAI, 2024) and LLaMA models from Meta (Patterson et al., 2022) due to their popularity and reach. As the landscape rapidly evolved, we expanded our scope to include DeepSeek1 to ensure broader coverage and comparison across architectures. The formatting of the prompts varies according to the model specifications, but they generally contain the following information. Since the generation of essays on a particular topic has been explored in literature such as (Kim et al., 2025; Yeo et al., 2025), we wanted to explore the generation of discourses, particularly for two reasons: 1) The complexity of the topic increases and maintaining a progressive discussion given the explicit persona is a difficult task. 2) It is also interesting to understand the consistency in the assignment of personality traits, which must be maintained throughout the conversation but not explicitly stated. The traits are assigned in two forms of extremities: High or Low."
+    },
+    {
+        "page": 4,
+        "chunk_id": 34,
+        "text": "etal.,2025; Yeo et al., 2025, wanted to explore the generation of discourses, particularly for two reasons: 1) The complexity of the topic increases and maintaining a progressive discussion given the explicit persona is a difficult task. 2) It is also interesting to understand the consistency in the assigned personality traits which must be maintained throughout the conversation but not explicitly mentioned in the utterances."
+    },
+    {
+        "page": 4,
+        "chunk_id": 35,
+        "text": "Para explorar a geração de discursos, em particular por duas razões: 1) A complexidade do tema aumenta e manter uma discussão progressiva dada a personificação explícita é uma tarefa difícil. 2) É também interessante entender a consistência da personalidade durante uma conversa, onde os traços de personalidade atribuídos devem ser mantidos ao longo da conversa, mas não mencionados explicitamente nas falas. Cada fala deve ter até 50 palavras e a fala anterior precisa ser abordada.\nDataset: Selecionamos cuidadosamente 100 diferentes tópicos que exigem considerações éticas, morais, sociais ou políticas, e 20 diferentes combinações de traços aleatórios (mais detalhes no Apêndice).\nUser Prompt: O prompt do usuário desempenha um papel importante na formação da conversa, pois as discussões anteriores são passadas através do prompt do usuário para gerar a próxima fala."
+    },
+    {
+        "page": 4,
+        "chunk_id": 36,
+        "text": "During the experiments, we noted that GPT models followed instructions effectively in a zero-shot setting with minimal guidance, while models like Llama and DeepSeek required more detailed explanations and constraints. There are two basic requirements to create the discourse between two agents. The first one is the DeepSeek models and the second one is Debate Topics."
+    },
+    {
+        "page": 5,
+        "chunk_id": 37,
+        "text": "During the experiments, we noted that GPT models followed instructions effectively in a zero-shot setting with minimal guidance, while models like Llama and DeepSeek required more detailed explanations and constraints. This suggests that GPT models are more adaptable to imperfect prompts compared to other state-of-the-art models. Validation involves both human assessment and agent-based evaluation. Discourse quality and coherence are checked via: 1) A human observation of 10-15 discourses made randomly for each of the categories for the length, content, coherence, and quality of the discourse."
+    },
+    {
+        "page": 5,
+        "chunk_id": 38,
+        "text": "An important aspect of this study is understanding potential bias in classification into High or Low traits. While overall accuracy may be high, we focus on whether both categories are proportionately represented. There is an analysis of 10-15 discourses made randomly for each of the categories focusing on the length, content, coherence, and quality of the discourse. For each course of discourse, we analyze the similarity scores between all the utterances to make sure that the same arguments are not repeated. Inter-rater reliability among the models is also assessed."
+    },
+    {
+        "page": 5,
+        "chunk_id": 39,
+        "text": "LLMs are used in the literature for personality trait extraction (Zhu et al., 2025; Sun et al., 2024). Inter-rater reliability, which is a measure used to understand the agreement between models, employs PLMs to analyze dialogues to infer personality traits and then uses pre-assigned personality traits as ground-truth data for evaluation in Section 4. Kappa statistics (κ) is a common method to assess the consistency of ratings among raters (Judge LLMs). We computed Fleiss’ Kappa by first gathering evaluations."
+    },
+    {
+        "page": 5,
+        "chunk_id": 40,
+        "text": "Personality trait predictions were gathered from five different judge models. Each model analysed debates across multiple topics and rated the Big Five personality traits for two participants (P1 & P2). Once the discourses are generated, each of the discourses is evaluated by Judge agents. The judge agents return data in a JSON format with their prediction of each speaker's personality traits in the text. We structured the data so that all model ratings for the same Topic-Trait pair were aligned, ensuring consistency. To reduce the bias of human versus agent-generated comparison, the content was reformatted, and we provided the utterances to the Judge agents specifying that they are 'human-generated'."
+    },
+    {
+        "page": 5,
+        "chunk_id": 41,
+        "text": "After validation, we reformatted the content, provided the utterances to the Judge agents specifying that they are 'human-generated', and constructed a matrix where each row represents a topic-trait combination. The matrix contained counts of how many models classified the trait as High or Low for both P1 and P2 separately. Personality prediction consistency across models was calculated using Python's 'statsmodels' package, specifically the fleiss_kappa function to extract the consistency of various judge models across all topics."
+    },
+    {
+        "page": 5,
+        "chunk_id": 42,
+        "text": "Personality prediction consistency across models: To evaluate model consistency, we use Python's 'statsmodels' package, specifically the fleiss_kappa function, to extract the consistency of various judge models across all topics. With access to both the assigned traits (Section 3.1) and inferred traits (Section 3.2) using different judge agents, we start by calculating the accuracy with which the models correctly identify High and Low traits, respective to the ground values. This method allows us to measure the accuracy of the models' predictions, also known as inferred traits."
+    },
+    {
+        "page": 5,
+        "chunk_id": 43,
+        "text": "We calculate the accuracy of prediction in two different ways: the accuracy of predicted High for each trait as High Trait Classification Accuracy (HTA) and finally accuracy of predicted Low for each trait as Low Trait Classification Accuracy (LTA). Recall, that we assign a high or low value for each OCEAN trait while assigning personalities in Section 3.1. We create a confusion matrix for this labeling all the True and False predictions of High and Low values to compute the HTA and LTA values."
+    },
+    {
+        "page": 5,
+        "chunk_id": 44,
+        "text": "Assigned personality traits in Section 3.1 involve creating a confusion matrix to label all the True and False predictions for High and Low values to compute the HTA and LTA values. This analysis is important as it depicts if the personality traits are reflected in the contents generated by the agents. We analyse if the discourses linguistically align with the assigned personality traits. HTA measures how well the models classify traits assigned as High originally. Various factors like language, tone, and argument structures contribute towards the HTA calculation by creating a confusion matrix for correct and incorrect classifications."
+    },
+    {
+        "page": 5,
+        "chunk_id": 45,
+        "text": "Various factors like language, tone, and argument structures contribute towards the computed HTA by creating a confusion matrix for correct and incorrect classifications. HTA is calculated by considering different stats models."
+    },
+    {
+        "page": 6,
+        "chunk_id": 46,
+        "text": "GPT-4ovs Judge GPT-4ovsGPT-4o-mini GPT-4ovsDeepSeek LLaMA-3.3-70B-Instruct o4-TPG HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 97.1 57.1 99.7 38.9 90 80 98.4 30.9 99.5 15.0 70 97.1 12.8 97.6 11.0 60 50 63.1 92.2 63.2 86.7 40 30 31.4 96.6 28.9 97.0 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 91.2 73.0 98.3 47.3 80 95.1 37.6 96.0 21.6 60 96.3 24.0 97.8 7.8 43.9 95.8 43.3 94.7 40 62.1 86.0 25.7 94.3 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 100 91.8 18.6 99.1 40.0 80 99.1 6.4 97.7 11.0 60 97.7 9.9 99.2 2.4 40 7.4 99.3 1.2 100.0 20 10.3 96.0 11.3 95.0 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 97.8 49.0 99.3 34.4 90 80 98.4 26.5 99.5 13.0 70 97.3 15.4 97.0 18.2 60 50 66.8 83.0 70.4 76.1 40 30 14.3 99.2 11.4 99.4 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 95.1 59.5 98.8 47.2 90 80 97.5 28.0 97.1 20.1 70 95.4 30.4"
+    },
+    {
+        "page": 6,
+        "chunk_id": 47,
+        "text": "Metrics(%) stiarT ytilanosreP gA pO oC xE eN 100 91.8 18.6 99.1 40.0 80 99.1 6.4 97.7 11.0 60 97.7 9.9 99.2 2.4 40 7.4 99.3 1.2 100.0 20 10.3 96.0 11.3 95.0 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 97.8 49.0 99.3 34.4 90 80 98.4 26.5 99.5 13.0 70 97.3 15.4 97.0 18.2 60 50 66.8 83.0 70.4 76.1 40 30 14.3 99.2 11.4 99.4 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 95.1 59.5 98.8 47.2 90 80 97.5 28.0 97.1 20.1 70 95.4 30.4 97.0 12.3 60 50 54.2 89.3 49.3 88.7 40 30 33.8 98.5 13.4 99.3 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 92.2 17.1 98.8 38.7 80 99.9 7.6 97.2 14.1 60 97.6 9.7 97.9 5.2 40 14.7 97.3 10.3 97.4 20 4.1 99.2 2.1 99.2"
+    },
+    {
+        "page": 6,
+        "chunk_id": 48,
+        "text": "97.0 12.3 60 50 54.2 89.3 49.3 88.7 40 30 33.8 98.5 13.4 99.3 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 92.2 17.1 98.8 38.7 80 99.9 7.6 97.2 14.1 60 97.6 9.7 97.9 5.2 40 14.7 97.3 10.3 97.4 20 4.1 99.2 2.1 99.2 AMaLL HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 98.1 48.1 99.9 33.3 80 94.5 38.6 97.4 21.7 98.2 9.3 98.8 7.7 60 64.5 77.7 67.6 74.5 40 20.6 96.6 20.7 97.0 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO"
+    },
+    {
+        "page": 6,
+        "chunk_id": 49,
+        "text": "HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 95.2 61.4 99.4 40.2 80 93.4 40.8 92.2 27.7 60 98.1 14.9 99.1 4.7 40 54.0 82.8 47.3 84.2 49.2 92.3 18.9 96.3 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 95.9 13.2 99.8 32.2 80 98.3 10.9 93.6 21.6 60 96.6 10.6 98.9 2.2 40 24.9 90.0 11.4 95.0 20 7.3 96.5 9.3 95.5 newQ HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA"
+    },
+    {
+        "page": 6,
+        "chunk_id": 50,
+        "text": "91.9 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 91.9 49.7 95.0 36.6 90 80 77.9 57.5 70.4 57.7 70 60 69.5 57.1 75.7 40.8 50 11.9 95.1 16.1 94.5 40 30 49.2 88.9 23.3 90.9 20 HTA_P1 LTA_P1 HTA_P2 LTA_P2 Metrics(%) stiarT ytilanosreP gA pO oC xE eN 81.0 25.8 92.6 31.5 80 80.0 32.2 60.7 55.2 60 74.7 35.3 85.1 23.7 40 6.5 95.9 1.9 97.9 20 11.2 92.3 12.5 94.0 Table1: Calculation of High Trait Classification Accuracy (HTA) and Low Trait Classification Accuracy (LTA) for Participants 1 and 2 across all the conversations for all the Judge Agents."
+    },
+    {
+        "page": 6,
+        "chunk_id": 51,
+        "text": "Participants 1 and 2 across all the conversations for all the Judge Agents. This evaluation is critical for determining the controllability of personality traits in language models and validating their alignment with intended psychological characteristics. The alignment of personality traits with the content produced (Pennebaker and King, 1999). Linguistic Inquiry and Word Count (LIWC-22) (Boyd et al., 2022) analysis is a widely used tool for this category that classifies words into psychological and linguistic categories."
+    },
+    {
+        "page": 6,
+        "chunk_id": 52,
+        "text": "Four models are involved in the creation of discourse in different combinations (GPT-4o vs. GPT-4o-mini, GPT-4o vs. Llama-3.3-70B-Instruct, GPT-4o vs. Deepseek-llm-67B-Chat). All of these models have been set up at higher temperatures (>0.8) to allow creativity during discourse generation. (Ireland and Mehl, 2014) explain how natural language and linguistic markers can effectively serve as an indicator of personality traits. For instance, extraverts tend to use more positive words and social process words to reflect their sociable nature."
+    },
+    {
+        "page": 6,
+        "chunk_id": 53,
+        "text": "Linguistic markers are successfully able to understand and predict the personality traits in given text (Mairesse et al., 2007). We use the capabilities of LIWC-22 to extract the linguistic features and systematically map the five personality traits from the data to analyse the results. Limited by resources (NVIDIA A6000 GPU), the larger models such as Llama-3.3-70B-Instruct and Deepseek-llm-67B-Chat, were quantized to generate discourse. The max tokens were limited to 150 to prevent the model from generating verbose utterances."
+    },
+    {
+        "page": 6,
+        "chunk_id": 54,
+        "text": "For the evaluations of the generated discourse, we used five different models: GPT-4o, GPT-4o-mini, Llama-3.3-70B-Instruct, Qwen-2.5-14B-Instruct-1M, and Deepseek-llm-67B-Chat, which were the judge agents. The experiments are carried out in two phases: 1) Agents are personified and discourse is generated on a given topic; 2) Personality traits are extracted from the discourses and evaluation is performed."
+    },
+    {
+        "page": 7,
+        "chunk_id": 55,
+        "text": "Consistency in the results is crucial. High Neuroticism is particularly challenging, likely due to judge models failing to recognize it in text, or conversational models avoiding highly neurotic responses. Utterances from LLaMA-3.3-70B-Instruct and DeepSeek-LLM-67B-Chat required filtration due to prompt repetition and inline tags, whereas GPT models adhered to instructions effectively. However, some divergent cases occur where GPT-4o detects neuroticism with 62% precision, significantly higher than in other models."
+    },
+    {
+        "page": 7,
+        "chunk_id": 56,
+        "text": "Discourse3 involves comparison of detecting High Trait Neuroticism between GPT-4ovs. and DeepSeek, which proved to be more challenging than the other two combinations. The scores are as follows: Agr 0.500, 0.557, 0.242, 0.692, 0.518, 0.532; Ope 0.699, 0.420, 0.534, 0.631, 0.250, 0.430; Con 0.352, 0.366, 0.502, 0.421, 0.330, 0.367; Ext 0.123, 0.097, 0.235, 0.105, 0.287, 0.260; Neu 0.480, 0.293, 0.233, 0.463, 0.351, 0.389. DeepSeek was used as a judge for pairwise conversation analysis, while LLaMA-3.3 and Qwen-2.5 required refinement. Despite the refinement, DeepSeek showed over 40% invalid responses, leading to its exclusion from Table 1."
+    },
+    {
+        "page": 7,
+        "chunk_id": 57,
+        "text": "DeepSeek proved unreliable, with over 40% invalid responses, leading to its exclusion from Table 1. Fleiss’ Kappa Scores for Personality Trait Agreement are as follows: Discourse1 involves GPT-4ovs. GPT-4o-mini, Discourse2 involves GPT-4ovs. Llama-3.3-70B-Instruct, and Discourse3 involves GPT-4ovs. Deepseek-llm-67b-chat. Participants 1 and 2 (P1 and P2) were involved in the analysis. The accuracy of high trait prediction in Neuroticism and Extraversion was significantly lower for the GPT-4ovs. Deepseek conversation for both participants. This suggests that while exploration models of low Neuroticism and Extraversion are comparable to the other two conversations, the complexity increases when these domains are high in the GPT-4ovs. Deepseek conversations."
+    },
+    {
+        "page": 7,
+        "chunk_id": 58,
+        "text": "A acurácia das previsões de traços de personalidade de Neuroticismo e Extroversão foi significativamente menor nas conversas do GPT-4o vs. Deepseek para ambos os participantes 1 e 2. Isso sugere que, embora a exploração de baixo Neuroticismo e Extroversão seja comparável às outras duas conversas, a complexidade aumenta quando esses domínios são altos na conversa do GPT-4o vs. Deepseek. Enquanto observamos figuras na Tabela 1 que representam o resultado da previsão de personalidade para cada um dos modelos julgadores, agora descrevemos vários padrões interessantes observados com diferentes modelos como juízes."
+    },
+    {
+        "page": 7,
+        "chunk_id": 59,
+        "text": "Analysis across judge models: We note that the results tend to be constant among the judges for Agreeableness, Openness, and Conscientiousness. If GPT-4 rates high Agreeableness to participant 1 in one conversation, other judge models are likely to present similar results. GPT-4o, GPT-4o-mini, and LLaMA-3.3-70B-Instruct achieve comparable and high-quality results for both Person 1 and Person 2, which addresses RQ1 & RQ3."
+    },
+    {
+        "page": 7,
+        "chunk_id": 60,
+        "text": "We observed a 90% accuracy. However, for the same categories conditional capability of these agents as judges of traits, Qwen-2.5-14B-1M produces significantly low numbers for Openness and Conscientiousness while the scores for Agreeableness are comparable. This is true within various traits and also for the High and Low classification of the traits. Also, this finding provides an impression of inconsistency from the perspective of the size of the models."
+    },
+    {
+        "page": 7,
+        "chunk_id": 61,
+        "text": "Larger models such as GPT-4 and Llama-3.3-70B-Instruct have higher accuracy in predicting High classification compared to smaller models like Qwen-2.5-14B-Instruct-1M. However, the accuracy of predicting the Low trait was significantly high for Openness and Conscientiousness with Qwen-2.5 as a Judge compared to other models. Section 5.2, Inter-Model Agreement, presents the Fleiss’ Kappa statistics, measuring inter-model agreement on personality trait judgments."
+    },
+    {
+        "page": 7,
+        "chunk_id": 62,
+        "text": "Participants 1 and 2 across all dialogues. Overall, for Agreeableness, Openness, and Conscientiousness, the ability of the models (GPT-4o, GPT-4o-mini and Llama-3.3) to predict their High values is significantly higher than predicting the Low values. In Discourse 1, Agreeableness showed moderate agreement (κ > 0.5) for both participants. Openness agreement was substantial for Participant 1 but moderate for Participant 2. Conscientiousness Judgments for Neuroticism and Extraversion and Neuroticism exhibited fair to moderate agreement. Notably, Extraversion showed the lowest agreement, with High values predicted less frequently across all discourses and participants."
+    },
+    {
+        "page": 7,
+        "chunk_id": 63,
+        "text": "Judgments for Neuroticism and Extraversion exhibited fair to moderate agreement. Notably, Extraversion showed the lowest agreement, with high values predicted less frequently across all discourses and participants. When observed with scrutiny, detecting high values for Extraversion is challenging."
+    },
+    {
+        "page": 8,
+        "chunk_id": 64,
+        "text": "Figure 3: LIWC analysis depicting the accuracy of conveying the assigned personality traits to Participants 1 and 2. Ag, Op, Co, Ex, Ne Personality Traits (%) accuracy 100 Participant 1 Participant 2 80 60 40 20 0. (a) GPT-4 vs. GPT-4o-mini. (b) GPT-4 vs. LLaMA-3.3. (c) GPT-4 vs. DeepSeek. This analysis indicates poor reliability in its assessment of agreement."
+    },
+    {
+        "page": 8,
+        "chunk_id": 65,
+        "text": "51%. This suggests that expressing Openness is particularly challenging for these LLMs. Llama-3.3 exhibited the highest Conscientiousness, while GPT-4o showed the highest Extraversion. However, these differences were not statistically significant, and trait expression varied depending on the conversational partner. Discourse 2 revealed minimal Agreeableness agreement for Participant 1 but substantially higher agreement for Participant 2, highlighting fluctuations in judging this trait. Openness maintained moderate to substantial agreement."
+    },
+    {
+        "page": 8,
+        "chunk_id": 66,
+        "text": "Conscientiousness and Extraversion agreement increased compared to Discourse 1, though Extraversion remained low overall. Neuroticism agreement showed a reversed trend, with lower agreement for Participant 1 and higher for Participant 2. GPT-4o’s depiction of Neuroticism was most accurate when interacting with Llama-3.3. This variability in traits and conversational settings directly addresses RQ3, confirming that all OCEAN traits are not equally prominent in generated conversations."
+    },
+    {
+        "page": 8,
+        "chunk_id": 67,
+        "text": "In Discourse 3, the Agreeableness agreement remained moderate, while the Openness agreement decreased drastically. The Conscientiousness, Extraversion, and Neuroticism agreement was stable between participants but only slight to fair. When comparing pairwise dialogues, GPT-4o vs. GPT-4o-mini and GPT-4o vs. Llama-3.3 showed similar performance. However, dialogues between GPT-4o and Deepseek exhibited significantly different results. We observed that Deepseek struggled to consistently follow instructions, which might have affected the results. These results address RQ2, demonstrating inconsistent inter-model agreement on personality traits."
+    },
+    {
+        "page": 8,
+        "chunk_id": 68,
+        "text": "When comparing pairwise dialogues, GPT-4o remained with moderate agreement for Agreeableness. Openness agreement decreased drastically compared with previous versions like GPT-4o-mini and GPT-4o vs. Llama-3.3. For Conscientiousness, Extraversion, and Neuroticism, agreement was stable between participants but showed only slight to fair agreement. However, in GPT-4o vs. Deepseek dialogues significantly different results were observed, with Deepseek struggling to consistently follow instructions from the prompts, even though the prompts were minimally adapted across models. Agreeableness and Openness agreement fluctuated across dialogues. The consistently low Extraversion agreement indicates significant challenges in its reliable assessment. This variability underscores the non-uniformity of personality alignment across different models, which may have contributed to the observed differences."
+    },
+    {
+        "page": 8,
+        "chunk_id": 69,
+        "text": "in LLMs, highlighting difficulties in achieving stable and interpretable personality-driven interactions. This paper provides a comprehensive evaluation of discourse alignment with assigned trait adherence in LLM agents engaged in dyadic conversations. Our findings highlight the significant challenges in achieving consistent and interpretable personality-aligned interactions. While Figure 3 presents the accuracy of personality trait depiction for Participants 1 and 2, measured using LIWC-22, GPT-4o-mini achieved the highest accuracy for Agreeableness across all dialogues."
+    },
+    {
+        "page": 8,
+        "chunk_id": 70,
+        "text": "GPT-4o-mini achieved the highest accuracy for Agreeableness across all dialogues, according to LIWC-22 analysis. However, GPT-4o's Agreeableness accuracy decreased substantially (from 68% and 65% to 52%) when conversing with Deepseek than GPT-4o-mini and Llama-3.3, suggesting a potential shift in personality expression depending on the interlocutor, similar to human behaviour. Future work should explore more sophisticated methods for instilling and evaluating personality, investigating the impact of dialogue context and developing metrics for assessing the nuances of personality expression in LLMs."
+    },
+    {
+        "page": 8,
+        "chunk_id": 71,
+        "text": "GPT-4o-mini achieved the highest accuracy for Agreeableness across all dialogues. However, GPT-4o’s Agreeableness accuracy decreased substantially (from 68% and 65% to 52%) when conversing with Deepseek and Llama-3.3, suggesting a potential shift in personality expression depending on the interlocutor, similar to human behaviour (Atherton et al., 2022). This indicates that while large language models (LLMs) can be guided to exhibit certain personality traits, their ability to maintain these traits across dynamic conversations varies considerably. Future work should explore more sophisticated methods for instilling and evaluating personality, investigate the impact of dialogue context and develop metrics for assessing the nuances of personality expression in LLMs. Exploring fine-tuning strategies or reinforcement learning approaches for improving consistency would also be valuable. Openness was the trait least accurately represented in all dialogues, with a maximum accuracy of 8."
+    },
+    {
+        "page": 9,
+        "chunk_id": 72,
+        "text": "Limitations and change in the big five personality traits: Findings from a longitudinal study of Mexican-origin adults. One of the key challenges in this study is the absence of a standardized benchmarking system that all evaluations adhere to, making direct comparisons across different approaches more difficult. Evaluating personality traits in large language models: Insights from psychological questionnaires. While strict rules were enforced to structure the personality traits in large language models, models did not always fully comply, occasionally deviating from expected dialogue patterns."
+    },
+    {
+        "page": 9,
+        "chunk_id": 73,
+        "text": "Evaluating personality traits in large language models: Insights from psychological questionnaires. While strict rules were enforced to structure the discourse, models did not always fully comply, occasionally deviating from expected dialogue patterns. Additionally, there is a risk of bias, as language models may incorporate their own implicit judgments into discussions, potentially influencing personality assessments. The development and psychometric properties of LIWC-22."
+    },
+    {
+        "page": 9,
+        "chunk_id": 74,
+        "text": "Austin, TX: University of Texas at Austin. Another important consideration is the length of dyadic conversations, as there is no widely accepted standard for how long a dialogue should be to ensure a reliable evaluation. Yuhao Dan, Jie Zhou, Qin Chen, Junfeng Tian, and Liang He. 2024. P-tailor: Customizing personality traits for language models via mixture of specialized lora experts. arXiv preprint arXiv:2406.12548."
+    },
+    {
+        "page": 9,
+        "chunk_id": 75,
+        "text": "Longer or shorter exchanges might yield different insights, adding a layer of complexity to the interpretation of results. Ivar Frisch and Mario Giulianelli. 2024. LLM agents in interaction: Measuring personality consistency and linguistic alignment in interacting populations of large language models. In Proceedings of the 8th Workshop on Personalization of Generative AI Systems (PERSONALIZE 2024), pages 102–111, St. Julians, Malta. Association for Computational Linguistics. Ethical Considerations: We do not collect any personal information and views for the creation of the discourse dataset or refer to any kind of personal traits from any sources."
+    },
+    {
+        "page": 9,
+        "chunk_id": 76,
+        "text": "Julians, Malta. Association for Computational Linguistics. Ji-Eun Han, Jun-Seok Koh, Hyeon-Tae Seo, Du-Seong Chang, and Kyung-Ah Sohn. 2024. Psydial: Personality-based synthetic dialogue generation using large language models. arXiv preprint. We do not collect any personal information and views for the creation of the discourse dataset or refer to any kind of personal traits from any sources to judge the nature of conversations. All the discourses are created by LLM agents. Topics provided for discussion for the agents are debatable but do not involve or promote the thought of violence, hatred or extremism of any kind to anyone."
+    },
+    {
+        "page": 9,
+        "chunk_id": 77,
+        "text": "involve or promote the thought of violence, hatred, or extremism of any kind to anyone. We use open and closed-source models that are available off the shelf and accessible to the general public. No changes in the model architecture have been made. Some hyperparameters have been adjusted to meet our expectations of the results."
+    },
+    {
+        "page": 9,
+        "chunk_id": 78,
+        "text": "Expectations of the results have been met as mentioned clearly in the paper by Waqar Husain, Areen Jamal Haddad, Muhammad Ahmad Husain, Hadeel Ghazzawi, Khaled Trabelsi, Achraf Ammar, Zahra Saif, Amir Pakpour, and Haitham Jahrami in their 2025 study. They examined the reliability generalization and meta-analysis of the internal consistency of the Big Five Inventory (BFI) comparing BFI (44 items) and BFI-2 (60 items) versions while controlling for age, sex, and language factors. Despite achieving the expected outcomes, the study acknowledges that LLMs can introduce bias in their results, as indicated by numerous studies. The dataset generated by the conversing agents, including these potential biases, has not been made public yet, but there are plans to publish it for further studies with careful ethical consideration and approvals."
+    },
+    {
+        "page": 9,
+        "chunk_id": 79,
+        "text": "The dataset generated by the conversing agents has not been made public, but we do plan to publish it for further studies with careful ethical consideration and approvals. The results do present bias in predicting the BFI from the discourses but are solely limited to LLMs as judges. Natural language use as a marker. The content of LLM agents is subject to change if they are altered, fine-tuned, and tempered in different ways, which is a potential risk."
+    },
+    {
+        "page": 9,
+        "chunk_id": 80,
+        "text": "Roy, and Jad Kabbara. 2023. Personallm: Investigating the ability of large language models to express personality traits. arXiv preprint arXiv:2305.02547. References OliverPJohn, EileenMDonahue, and RobertLKentle. 1991. Bigfiveinventory. Journal of personality and social psychology. 9"
+    },
+    {
+        "page": 10,
+        "chunk_id": 81,
+        "text": "Hongjin Kim, Jeonghyun Kang, and Harksoo Kim. 2025. Can large language models differentiate harmful from argumentative essays? Steps toward ethical essay scoring. In Proceedings of the 31st International Conference on Computational Linguistics, pages 8121–8147. Yu-Min Tseng, Yu-Chao Huang, Teng-Yun Hsiao, Yu-Ching Hsu, Jia-Yin Foo, Chao-Wei Huang, and Yun-Nung Chen. 2024. Two tales of persona in LLMs: A survey of role-playing and personalization. arXiv preprint arXiv:2406.01171. Zhiheng Xi, Wenxiang Chen, Xin Guo, Wei He, Yiwen Ding, Boyang Hong, Ming Zhang, Junzhe Wang, Senjie Jin, Enyu Zhou, et al. 2025."
+    },
+    {
+        "page": 10,
+        "chunk_id": 82,
+        "text": "Lawrence J Klinkert, Steph Buongiorno, and Corey Clark. 2024. Evaluating the efficacy of LLMs to emulate realistic human personalities. In Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment, volume 20, pages 65–75. Haein Yeo, Taehyeong Noh, Seungwan Jin, and Kyungsik Han. 2025. PADO: Personality-induced multi-agents for detecting OCEAN in human-generated texts. In Proceedings of the 31st International Conference on Computational Linguistics, pages 5719–5736, Abu Dhabi, UAE. Association for Computational Linguistics."
+    },
+    {
+        "page": 10,
+        "chunk_id": 83,
+        "text": "Personality-induced multi-agents for detecting OCEAN in human-generated texts. In Proceedings of the 31st International Conference on Computational Linguistics, pages 5719–5736, Abu Dhabi, UAE. Association for Computational Linguistics. Junyi Li, Charith Peris, Ninareh Mehrabi, Palash Goyal, Kai-Wei Chang, Aram Galstyan, Richard Zemel, and Rahul Gupta. 2024. The steerability of large language models toward data-driven personas. In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 7283–7298."
+    },
+    {
+        "page": 10,
+        "chunk_id": 84,
+        "text": "François Mairesse, Marilyn A Walker, Matthias R Mehl, and Roger K Moore. 2007. Using linguistic cues for the automatic recognition of personality in conversation and text. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 2204–2213, Melbourne, Australia. Association for Computational Linguistics."
+    },
+    {
+        "page": 10,
+        "chunk_id": 85,
+        "text": "Melbourne, Australia. Association for Computational Linguistics. OpenAI. 2024. Gpt-4omini: advancing cost-efficient intelligence. 2025. Investigating large language models in inferring personality traits from user conversations. arXiv preprint arXiv:2501.07532. Jianfeng Zhu, Ruoming Jin, and Karin G Coifman. David Patterson, Joseph Gonzalez, Urs Hölzle, Quoc Le, Chen Liang, Lluis-Miquel Munguia, Daniel Rothchild, David So, Maud Texier, and Jeff Dean."
+    },
+    {
+        "page": 10,
+        "chunk_id": 86,
+        "text": "Munguia, Daniel Rothchild, David So, Maud Texier, and Jeff Dean. Yangfu Zhu, Yue Xia, Meiling Li, Tingting Zhang, and Bin Wu. 2024. Data augmented graph neural networks for personality detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 38, pages 664–672. James W Pennebaker and Laura A King. 1999. Linguistic styles: language use as an individual difference. Journal of Personality and Social Psychology, 77(6): 1296."
+    },
+    {
+        "page": 10,
+        "chunk_id": 87,
+        "text": "Journal of Personality and Social Psychology, 77(6):1296. Jorge Pérez, Jessica Díaz, Javier Garcia-Martin, and Bernardo Tabuenca. 2020. Systematic literature reviews in software engineering—enhancement of the study selection process using Cohen’s kappa statistic. Journal of Systems and Software, 168:110657. Beatrice Rammstedt. 2007. The 10-item big five inventory. European Journal of Psychological Assessment, 23(3):193–201. Zhiyao Shu, Xiangguo Sun, and Hong Cheng. 2024. When LLM meets hypergraph: A sociological analysis on personality via online social networks."
+    },
+    {
+        "page": 10,
+        "chunk_id": 88,
+        "text": "Zhiyao Shu, Xiangguo Sun, and Hong Cheng. 2024. When LLM meets hypergraph: A sociological analysis on personality via online social networks. In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, pages 2087–2096. Lei Sun, Jinming Zhao, and Qin Jin. 2024. Revealing personality traits: A new benchmark dataset for explainable personality recognition on dialogues. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing, page 10."
+    },
+    {
+        "page": 11,
+        "chunk_id": 89,
+        "text": "A Sample of Topics and Trait Combinations Used at all times during your conversation: \n- Maintain these personality traits. \n- Keep responses under 50 words. \n- Maintain your personality consistently. \nSamples of topics used for debate include: 'Is the concept of a universal language beneficial?', 'Should the government regulate the pharmaceutical industry?', 'Is the use of nuclear energy justified?', and 'Should the government provide free public transportation?'. Address previous arguments directly but do not repeat what the other speaker said."
+    },
+    {
+        "page": 11,
+        "chunk_id": 90,
+        "text": "Is the use of nuclear energy justified? Should the government provide free public transportation? Is the concept of a cashless society beneficial? Should the government regulate the gaming industry? The user prompt carries the previous argument: \"Is the concept of a cashless society beneficial?\" USER_PROMPT = \"Previous Argument:{previous_argument}\" Extracting Personalities from the Judge: Trait combinations samples to assign personas to Agents. The system prompt to extract the personality traits: {\"Agreeableness\": \"High\","
+    },
+    {
+        "page": 11,
+        "chunk_id": 91,
+        "text": "SYSTEM_PROMPT = \"Analyze text segments from two anonymous debaters (Person One and Person Two) for: 1. Big Five Inventory (BFI) traits (High/Low for each dimension), 2. Consistency with typical behavior for those traits (Yes/No).\""
+    },
+    {
+        "page": 11,
+        "chunk_id": 92,
+        "text": "For each person, return: predicted_bfi: {\"Conscientiousness\": \"High/Low\", \"Agreeableness\": \"High/Low\", \"Extraversion\": \"High/Low\", \"Neuroticism\": \"High/Low\", \"Openness\": \"High/Low\"}"
+    },
+    {
+        "page": 11,
+        "chunk_id": 93,
+        "text": "The user prompt is: 'Analyze {persona}'s text:\\n{text}'. We use different system and user prompts to extract the discourses and ratings from the conversing and judging agents, where the persona contains Participant 1 and 2 and the text contains the discourses for each of the participants respectively. The system prompt to generate the discourses: 'You are participating in a structured debate on: '{topic}'\\nYour responses should"
+    },
+    {
+        "page": 11,
+        "chunk_id": 94,
+        "text": "reflect these personality traits:\n- Agreeableness: {traits['Agreeableness']}\n- Openness: {traits['Openness']}\n- Conscientiousness: {traits['Conscientiousness']}\n- Extraversion: {traits['Extraversion']}\n- Neuroticism: {traits['Neuroticism']}\n\nRules:"
+    },
+    {
+        "page": 12,
+        "chunk_id": 95,
+        "text": "Metadata of the Discourses. Metric GPT-4 vs GPT-4o-mini: Total Sentences 70,750, Total Words 781,330, Assertions 14,653, Questions 1,507, Logical Structures 690, Total Dialogues 2,020, Avg. Words per Sentence 11.04, Avg. Utterance Length 48.35. Table 3: Metadata analysis for GPT-4 vs GPT-4o-mini. Metric LLaMA-3 vs GPT-4o: Total Sentences 44,964, Total Words 541,603, Assertions 15,577, Questions 2,603, Logical Structures 767, Total Dialogues 2,020, Avg. Words per Sentence 12.05, Avg. Utterance Length 29.79. Table 4."
+    },
+    {
+        "page": 12,
+        "chunk_id": 96,
+        "text": "Table4: MetadataanalysisforLLaMA-3vsGPT-40 Metric DeepSeekvsGPT-4o TotalSentences 44,387 TotalWords 1,033,592 Assertions 17,800 Questions 380 LogicalStructures 4,697 TotalDialogues 2,020 Avg. WordsperSentence 23.29 Avg. UtteranceLength 56.85 Table5: MetadataanalysisforDeepSeekvsGPT-4o"
+    }
+]

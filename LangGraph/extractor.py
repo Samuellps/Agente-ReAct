@@ -7,7 +7,11 @@ from langgraph.graph import MessagesState
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 import pdfplumber
+from dotenv import load_dotenv
 
+
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 
 def chunk_text(text, chunk_size=500):
     """
@@ -194,7 +198,7 @@ class SimpleVectorDB:
 
 def search_catalog(query: str, k: int = 3):
     """
-    Realiza uma busca vetorial no catálogo de madeira para encontrar os 3 chunks de texto mais relevantes.
+    Realiza uma busca vetorial em um banco de dados de texto para encontrar os 'k' chunks mais relevantes.
 
     Parâmetros:
     
@@ -203,29 +207,32 @@ def search_catalog(query: str, k: int = 3):
 
     Funcionalidade:
     
-    Verifica se o banco vetorial existe.
-    Processa o PDF e cria embeddings, se necessário.
-    Retorna os 'k' chunks de texto mais relevantes.
+    - Verifica se o banco de dados vetorial existe.
+    - Processa o documento e gera embeddings, se necessário.
+    - Executa a busca e retorna os 'k' chunks de texto mais relevantes.
 
     Retorno:
     
-    Lista de dicionários com 'metadata' (informações do chunk) e 'similarity' (grau de relevância).
+    Lista de dicionários contendo:
+    - 'metadata': informações sobre o chunk correspondente.
+    - 'similarity': grau de relevância da correspondência.
     """
 
-    search_data = jsonSaver(pdf_path="/home/samuel/Agente-ReAct/LangGraph/arquivos/CATALOGO-GERAL-WOOD-FORT.pdf", json_path="/home/samuel/Agente-ReAct/LangGraph/json/woodfort.json")
-    with open("/home/samuel/Agente-ReAct/LangGraph/json/woodfort.json", "r", encoding="utf-8") as f:
+    with open("/home/samuel/Agente-ReAct/LangGraph/json/farmax.json", "r", encoding="utf-8") as f:
         json_data = json.load(f)
-    vector_db = SimpleVectorDB(name="catalogo_madeira", api_key="OPENAI_API_KEY")
+    vector_db = SimpleVectorDB(name="farmax", api_key=api_key)
     vector_db.load_data(json_data)
 
     # Executa a busca
     results = vector_db.search(query, k=k)
     return results
+
+
+
+
 tools = [search_catalog]
-llm = ChatOpenAI(model="gpt-4o", api_key="OPENAI_API_KEY")
+llm = ChatOpenAI(model="gpt-4o", api_key=api_key)
 llm_with_tools = llm.bind_tools(tools)
-
-
 
 if __name__ == "__main__":
 
